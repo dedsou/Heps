@@ -1,8 +1,8 @@
 import { Client } from "discord.js-selfbot-v13";
-import { Streamer } from '@dank074/discord-video-stream';
+const { Streamer } = require('@dank074/discord-video-stream');
 
 const streamer = new Streamer(new Client());
-await streamer.client.login(process.env.TOKEN);
+await streamer.client.login(process.env.TTOKEN);
 await streamer.joinVoice(1205265436862578780, 1251029660729348156);
 
 const udp = await streamer.createStream();
