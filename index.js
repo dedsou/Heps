@@ -3,13 +3,13 @@ import { Streamer } from '@dank074/discord-video-stream';
 
 const streamer = new Streamer(new Client());
 await streamer.client.login(process.env.TOKEN);
-await streamer.joinVoice(1152279443428081756, 1195770021746573422);
+await streamer.joinVoice(1205265436862578780, 1251029660729348156);
 
 const udp = await streamer.createStream();
 udp.mediaConnection.setSpeaking(true);
 udp.mediaConnection.setVideoStatus(true);
 try {
-    const res = await streamLivestreamVideo("http://78.47.224.234/puretaboo/index.m3u8", udp);
+    const res = await streamLivestreamVideo("http://live.adultiptv.net/russian.m3u8", udp);
 
     console.log("Finished playing video " + res);
 } catch (e) {
